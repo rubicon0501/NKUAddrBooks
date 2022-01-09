@@ -1,0 +1,38 @@
+<view class="section1">
+  <picker class="pCollege" bindchange="bindPickerCollegeChange" value="{{indexCollege}}" range="{{college}}">
+    <view class="picker">
+      选择学院：{{college[indexCollege]}}
+    </view>
+  </picker>
+  <picker class="pGrade" mode="date" value="{{date}}" start="1949" end="2022" fields="year" bindchange="bindDateChange">
+    <view class="picker">
+      选择年级: {{date}}
+    </view>
+  </picker>
+</view>
+<view class="section2">
+  <picker class="pMajor" bindchange="bindPickerMajorChange" value="{{indexMajor}}" range="{{major}}">
+    <view class="picker">
+      选择专业：{{major[indexMajor]}}
+    </view>
+  </picker>
+  <view class="itemView">姓名：
+    <input class="input" name="userName" placeholder="用户名" 
+    bindinput="userNameInput"/>
+  </view>
+</view>
+
+<layout title="查询结果" desc="请上下左右滑动查看更多信息">
+  <table class="basic-table" 
+    scrollX="{{true}}" 
+    columns="{{tableColumns}}" 
+    dataList="{{dataList}}" 
+    getListLoading="{{getListLoading}}" 
+    tableHeight="{{tableHeight}}"
+    showTipImage="{{dataList.length===0&!getListLoading}}" 
+    generic:action-td="action-td"
+    bindscrolltolower="getList" 
+    bindscrolltoupper="reloadList"  
+    bindclickaction="handleClickAction" 
+    bindonactionevent="handleOnActionEvent" />
+</layout>

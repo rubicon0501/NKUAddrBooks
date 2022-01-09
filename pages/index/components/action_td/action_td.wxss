@@ -1,0 +1,45 @@
+.action-box{
+    display: flex; 
+    font-size:28rpx
+}
+
+.action-box .name{
+    color:#006699;
+    text-align: center;
+    width: 100rpx;
+}
+.action-box .grade{
+    color:#669900;
+    text-align: center;
+    width: 200rpx;
+}
+.action-box .tel{
+    color:#990066;
+    text-align: center;
+    width: 200rpx;
+}
+.action-box .sex{
+    color:#006699;
+    text-align: center;
+    width: 100rpx;
+}
+.action-box .college{
+    color:#669900;
+    text-align: center;
+    width: 500rpx;
+}
+.action-box .job{
+    color:#990066;
+    text-align: center;
+    width: 500rpx;
+}
+
+.action-box .region{
+    color:#006699;
+    text-align: center;
+    width: 100rpx;
+}
+.action-td {
+    width: fit-content;
+}
+    
