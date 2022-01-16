@@ -1,0 +1,53 @@
+<view class="user">
+  <button style="width:500rpx; height:170rpx; margin:0rpx; padding:0rpx;" bindtap="nkuLogin" hover-class="none">
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{avatarUrl}}" mode="scaleToFill"></image>
+      <view class="userinfo-nickname">{{nickName}}</view>
+    </view>
+  </button>
+  <view class="update" bindtap="updateSelfInfo" >修改资料</view>
+</view>
+<view class="section1">
+  <picker class="pCollege" bindchange="bindPickerCollegeChange" value="{{indexCollege}}" range="{{college}}">
+    <view class="picker">
+      选择学院：{{college[indexCollege]}}
+    </view>
+  </picker>
+  <picker class="pGrade" mode="date" value="{{date}}" start="1980" end="2022" fields="year" bindchange="bindDateChange">
+    <view class="picker">
+      选择年级: {{date}}
+    </view>
+  </picker>
+</view>
+<view class="section2">
+  <picker class="pMajor" bindchange="bindPickerMajorChange" value="{{indexMajor}}" range="{{majors[indexCollege]}}">
+    <view class="picker">
+      选择专业：{{majors[indexCollege][indexMajor]}}
+    </view>
+  </picker>
+  <view class="itemView">姓名：
+    <input class="userName_input" name="userName" placeholder="请输入" 
+    bindinput="userNameInput"/>
+  </view>
+</view>
+<view class="block">
+  <view class="search-btn" bindtap="searchClassMates">
+    <button type="primary">查询</button>
+  </view>
+  <view class="content">
+    <table class="basic-table" 
+    scrollX="{{true}}" 
+    columns="{{tableColumns}}" 
+    dataList="{{dataList}}" 
+    getListLoading="{{getListLoading}}" 
+    tableHeight="{{tableHeight}}"
+    showTipImage="{{dataList.length===0&!getListLoading}}" 
+    generic:action-td="action-td"
+    bindclickaction="handleClickAction" 
+    bindonactionevent="handleOnActionEvent" />
+  </view>
+  <view class="desc">请上下左右滑动查看更多信息</view>
+</view>
+
+
+    

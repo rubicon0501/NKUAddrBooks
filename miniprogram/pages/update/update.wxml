@@ -1,0 +1,60 @@
+<!--pages/update/update.wxml-->
+<view class="section1">
+  <picker class="pCollege" bindchange="bindPickerCollegeChange" value="{{indexCollege}}" range="{{colleges}}">
+    <view class="picker">
+      选择院系：{{colleges[indexCollege]}}
+    </view>
+  </picker>
+  <picker class="pGrade" mode="date" value="{{date}}" start="1980" end="2022" fields="year" bindchange="bindDateChange">
+    <view class="picker">
+      选择年级: {{date}}
+    </view>
+  </picker>
+</view>
+<view class="section2">
+  <picker class="pMajor" bindchange="bindPickerMajorChange" value="{{indexMajor}}" range="{{majors[indexCollege]}}">
+    <view class="picker">
+      选择专业：{{majors[indexCollege][indexMajor]}}
+    </view>
+  </picker>
+  <picker class="pSex" bindchange="bindPickerSexChange" value="{{indexSex}}" range="{{sexs}}">
+    <view class="picker">
+      选择性别：{{sexs[indexSex]}}
+    </view>
+  </picker>
+</view>
+<view class="line"></view>
+<view class="viewTitle">
+    <text class="view-Name">姓名</text>
+    <view class="lineView"></view>
+</view>
+<view class="section">
+    <input class="input" bindinput="bindKeyInputName" value="{{name}}" placeholder="输入中文姓名"/>
+</view>
+<view class="viewTitle">
+    <text class="view-Name">工作单位</text>
+    <view class="lineView"></view>
+</view>
+<view class="section">
+    <input class="input" bindinput="bindKeyInputJob" value="{{job}}" placeholder="输入当前工作单位"/>
+</view>
+<view class="viewTitle">
+    <text class="view-Name">电话号码</text>
+    <view class="lineView"></view>
+</view>
+<view class="section">
+    <input class="input" bindinput="bindKeyInputTel"  value="{{tel}}" placeholder="输入使用中的电话号码"/>
+</view>
+<view class="viewTitle">
+    <text class="view-Name">籍贯</text>
+    <view class="lineView"></view>
+</view>
+<view class="section">
+    <input class="input" bindinput="bindKeyInputRegion" value="{{region}}" placeholder="输入籍贯"/>
+</view>
+<view class="update-btn" bindtap="updateSelfInfo">
+    <button style="width:90%" type="primary">提交修改</button>
+</view>
+
+
+

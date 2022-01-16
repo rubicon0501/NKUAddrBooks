@@ -1,0 +1,9 @@
+<view class="block">
+  <view class="title">
+  <button class="btn" bindtap="serachAddr"> {{title}}</button>
+  </view>
+  <view class="content">
+    <slot></slot>
+  </view>
+  <view class="desc">{{desc}}</view>
+</view>

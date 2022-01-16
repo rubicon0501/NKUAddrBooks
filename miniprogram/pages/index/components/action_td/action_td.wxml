@@ -1,0 +1,26 @@
+<view class="action-box" catchtap="handleClickItem" data-type="{{columns.key}}">
+  <block wx:if="{{columns.key === 'name'}}">
+    <view class="name">{{item.name}}</view>
+  </block>
+  <block wx:elif="{{columns.key === 'tel'}}">
+    <view  class="tel">{{item.tel}}</view>
+  </block>
+  <block  wx:elif="{{columns.key === 'job'}}">
+    <view class="job">{{item.job}}</view>
+  </block>
+  <block  wx:elif="{{columns.key === 'grade'}}">
+    <view class="grade">{{item.grade}}</view>
+  </block>
+  <block  wx:elif="{{columns.key === 'sex'}}">
+    <view class="sex">{{item.sex}}</view>
+  </block>
+  <block  wx:elif="{{columns.key === 'college'}}">
+    <view class="college">{{item.college}}</view>
+  </block>
+  <block  wx:elif="{{columns.key === 'major'}}">
+    <view class="major">{{item.major}}</view>
+  </block>
+  <block  wx:elif="{{columns.key === 'region'}}">
+    <view class="region">{{item.region}}</view>
+  </block>
+</view>

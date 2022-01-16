@@ -1,0 +1,22 @@
+/* pages/register/register.wxss */
+.register-btn {
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+}
+.area{
+    width: 90%;
+    margin-top: 30rpx;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 4rpx solid #437dd4;
+    border-radius: 10rpx;
+    background-color: white;
+  }
+
+  .search_input{
+    width: 80%;
+    margin-left: 30rpx;
+    height: 80rpx;
+    font-size: 34rpx;
+  }
+  

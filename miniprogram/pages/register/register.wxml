@@ -1,0 +1,11 @@
+<!--pages/register/register.wxml-->
+<view class="page-register" style="height:100%">
+    <view class="sub-class">
+        <view class="area" style="display:flex; flex-direction: row; justify-content: space-between; align-items: center;">
+            <input class="search_input" placeholder="输入加入校友会用的手机号" bindinput="bindKeyInput" value="{{phoneNum}}"></input>
+        </view>
+        <view class="register-btn" bindtap="registerWithPhoneNum" id="buttonContainer">
+            <button style="width:90%" type="primary">提交注册</button>
+        </view>
+    </view>
+</view>

@@ -1,8 +1,6 @@
 {
-    "description": "项目配置文件",
-    "packOptions": {
-        "ignore": []
-    },
+    "miniprogramRoot": "miniprogram/",
+    "cloudfunctionRoot": "cloudfunctions/",
     "setting": {
         "urlCheck": true,
         "es6": true,
@@ -10,9 +8,9 @@
         "postcss": true,
         "preloadBackgroundData": false,
         "minified": true,
-        "newFeature": false,
+        "newFeature": true,
         "coverView": true,
-        "nodeModules": true,
+        "nodeModules": false,
         "autoAudits": false,
         "showShadowRootInWxmlPanel": true,
         "scopeDataCheck": false,
@@ -37,23 +35,14 @@
         "packNpmRelationList": [],
         "minifyWXSS": true,
         "disableUseStrict": false,
-        "minifyWXML": true,
         "showES6CompileOption": false,
-        "useCompilerPlugins": false
+        "useCompilerPlugins": false,
+        "minifyWXML": true
     },
-    "compileType": "miniprogram",
-    "libVersion": "2.21.3",
     "appid": "wx58f4c9f8729f4f00",
-    "projectname": "AddrBook",
-    "debugOptions": {
-        "hidedInDevtools": []
-    },
-    "scripts": {},
-    "staticServerOptions": {
-        "baseURL": "",
-        "servePath": ""
-    },
-    "isGameTourist": false,
+    "projectname": "NKUAddrBook",
+    "libVersion": "2.20.1",
+    "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
     "condition": {
         "search": {
             "list": []
@@ -61,17 +50,20 @@
         "conversation": {
             "list": []
         },
-        "game": {
-            "list": []
-        },
         "plugin": {
             "list": []
         },
-        "gamePlugin": {
+        "game": {
             "list": []
         },
         "miniprogram": {
-            "list": []
+            "list": [
+                {
+                    "id": -1,
+                    "name": "db guide",
+                    "pathName": "pages/databaseGuide/databaseGuide"
+                }
+            ]
         }
     }
 }
