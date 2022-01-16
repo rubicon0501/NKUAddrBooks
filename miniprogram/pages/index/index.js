@@ -81,12 +81,12 @@ Page({
       key: "name",
       width: "100rpx",
       type: "action"
-    },{
+    }, {
       title: "电话",
       key: "tel",
       width: "200rpx",
       type: "action"
-    },  {
+    }, {
       title: "工作单位",
       key: "job",
       width: "800rpx",
@@ -166,6 +166,7 @@ Page({
                 nickName: res.result.data.name,
               })
               app.globalData.logStatus = true
+              this.searchClassMates()
             } else {
               wx.showModal({
                 title: '登录结果',
@@ -175,13 +176,15 @@ Page({
                 success(res) {
                   if (res.confirm) {
                     console.log('用户点击确定')
+                    if (resLogic == 2) {
+                      wx.navigateTo({
+                        url: '../register/register',
+                      })
+                    }
                   } else if (res.cancel) {
                     console.log('用户点击取消')
                   }
                 }
-              })
-              wx.navigateTo({
-                url: '../register/register',
               })
             }
           },
