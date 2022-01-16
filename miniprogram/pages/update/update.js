@@ -230,9 +230,9 @@ Page({
             data: {
                 name: this.data.name,
                 job: this.data.job,
-                tel: this.data.tel,
+                tel: parseInt(this.data.tel),
                 sex: this.data.sex,
-                grade: this.data.date,
+                grade: parseInt(this.data.date),
                 college: this.data.college,
                 major: this.data.major,
                 region: this.data.region,

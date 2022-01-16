@@ -81,15 +81,15 @@ Page({
       key: "name",
       width: "100rpx",
       type: "action"
-    }, {
-      title: "工作单位",
-      key: "job",
-      width: "500rpx",
-      type: "action"
-    }, {
+    },{
       title: "电话",
       key: "tel",
       width: "200rpx",
+      type: "action"
+    },  {
+      title: "工作单位",
+      key: "job",
+      width: "800rpx",
       type: "action"
     }, {
       title: "性别",
@@ -143,6 +143,7 @@ Page({
     }
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
     // 开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
+    console.log("djnwjdnjwndwj")
     wx.getUserProfile({
       desc: '用于确认会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
       success: (res) => {
@@ -180,7 +181,7 @@ Page({
                 }
               })
               wx.navigateTo({
-                url: '../index/index',
+                url: '../register/register',
               })
             }
           },
@@ -401,7 +402,7 @@ Page({
       name: 'nku_search',
       data: {
         name: this.data.curNname,
-        grade: this.data.curGrade,
+        grade: parseInt(this.data.curGrade),
         college: this.data.curCollege,
         major: this.data.curMajor,
       },

@@ -1,4 +1,7 @@
 /* pages/register/register.wxss */
+page{
+  background-color: #EAF0FB;
+}
 .register-btn {
     margin-top: 30rpx;
     margin-bottom: 30rpx;

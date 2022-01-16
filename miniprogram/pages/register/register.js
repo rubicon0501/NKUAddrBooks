@@ -13,7 +13,7 @@ Page({
         wx.cloud.callFunction({
             name: 'nku_sign',
             data: {
-                phoneNum: this.data.phoneNum,
+                phoneNum:  parseInt(this.data.phoneNum),
             },
             success: res => {
                 console.log(res);
