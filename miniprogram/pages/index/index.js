@@ -320,6 +320,7 @@ Page({
   },
   onLoad(options) {
     console.log(options + "Aloha");
+    app.globalData.logStatus = false
     //this.getList();
   },
   onShow() {
@@ -330,6 +331,12 @@ Page({
   },
   onShareAppMessage() {
     return app.globalData.transmit;
+  },
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+      app.globalData.logStatus = false
   },
 
   bindPickerCollegeChange: function (e) {
