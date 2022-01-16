@@ -89,7 +89,7 @@ Page({
     }, {
       title: "工作单位",
       key: "job",
-      width: "800rpx",
+      width: "650rpx",
       type: "action"
     }, {
       title: "性别",

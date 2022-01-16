@@ -18,7 +18,7 @@
 .action-box .job {
     color: #990066;
     text-align: center;
-    width: 800rpx;
+    width: 650rpx;
 }
 
 .action-box .sex {
