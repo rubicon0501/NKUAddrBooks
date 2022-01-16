@@ -1,9 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "layout": "./components/layout/layout",
-    "table": "/public/components/public/table/table",
-    "action-td": "./components/action_td/action_td"
-  },
-  "disableScroll": false
-}
