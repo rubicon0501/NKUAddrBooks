@@ -5,7 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        phoneNum: '13370320852'
+        phoneNum: ''
     },
     registerWithPhoneNum: function (e) {
         console.log(this.data.phoneNum)
